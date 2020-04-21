@@ -1,0 +1,18 @@
+.main{
+    background-color: #f2ebf5;
+    padding: 50px
+  }
+  .main h1{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .navbar{
+    background-color: #eccebd;
+  }
+  .maincontant{
+    background-color: #e5ecbd;
+  }
+  .footer{
+    background-color: #bdecde;
+  }

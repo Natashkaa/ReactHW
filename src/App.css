@@ -1,18 +1,70 @@
 .main{
-    background-color: #f2ebf5;
-    padding: 50px
-  }
-  .main h1{
-    font-size: 50px;
-    font-family: 'Times New Roman', Times, serif;
-  }
+  background-color: #f0dede;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center
+}
+.main h1{
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+}
 
-  .navbar{
-    background-color: #eccebd;
-  }
-  .maincontant{
-    background-color: #e5ecbd;
-  }
-  .footer{
-    background-color: #bdecde;
-  }
+
+.joke-container{
+  background-color: rgb(241, 238, 206);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgb(80, 80, 80);
+  width: 30%;
+  min-width: 200px;
+}
+.joke-container hr{
+  background-color: red;
+}
+.p-hide{
+  display:block;
+  transition: 3s;
+}
+
+.header, .footer{
+  background-color: rgb(119, 51, 108);
+  height: 100px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header button{
+  background-color: transparent;
+  border: 0px solid transparent;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+.header button:hover{
+  background-color: rgb(143, 61, 129);;
+}
+.header button:active{
+  background-color: rgb(177, 64, 158);;
+}
+.footer{
+  background-color: rgb(119, 51, 108);
+  height: 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.footer .social{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  height: 40px
+}
+.social a{
+  color: white
+}

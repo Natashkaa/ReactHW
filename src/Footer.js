@@ -1,15 +1,15 @@
 import React from 'react';
+import './App.css';
 
-function Footer() {
+function Footer(){
     return (
-      <div className="footer">
-          <ul>
-            <li>
-              <h5><i>Footer</i></h5>
-            </li>
-        </ul>
-      </div>
-    );
-  }
-  
-  export default Footer;
+        <div className="footer">
+            <div className="social">
+                <a href="#">instagram</a>
+                <a href="#">twitter</a>
+            </div>
+            
+        </div>
+    )
+}
+export default Footer;

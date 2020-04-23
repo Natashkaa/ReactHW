@@ -1,56 +1,42 @@
 .main{
-  background-color: #f0dede;
+  background-color: #def0ef;
   padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center
 }
-.main h1{
-  font-size: 50px;
-  font-family: 'Times New Roman', Times, serif;
+.todoItemChecked{
+  color: lightslategray;
+  text-decoration: line-through;
+  
 }
-
-
-.joke-container{
-  background-color: rgb(241, 238, 206);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 15px;
-  box-shadow: 0 5px 10px rgb(80, 80, 80);
-  width: 30%;
-  min-width: 200px;
+.item{
+  margin-left: 10px
 }
-.joke-container hr{
-  background-color: red;
+.input{
+  border: 2px solid green;
 }
-.p-hide{
-  display:block;
-  transition: 3s;
-}
-
-.header, .footer{
-  background-color: rgb(119, 51, 108);
+/*header*/
+.header{
+  background-color: rgb(66, 51, 119);
   height: 100px;
   color: white;
-  display: flex;
-  flex-wrap: wrap;
 }
-.header button{
+.today{
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
+}
+.start{
   background-color: transparent;
   border: 0px solid transparent;
-  font-size: 20px;
+  font-size: 30px;
   color: white;
-  font-weight: bold;
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
 }
-.header button:hover{
-  background-color: rgb(143, 61, 129);;
-}
-.header button:active{
-  background-color: rgb(177, 64, 158);;
-}
+/*footer*/
 .footer{
-  background-color: rgb(119, 51, 108);
+  background-color: rgb(66, 51, 119);
   height: 100px;
   color: white;
   display: flex;
@@ -63,8 +49,18 @@
   align-items: center;
   justify-content: space-between;
   width: 50%;
-  height: 40px
+  height: 40px;
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
+  
 }
 .social a{
-  color: white
+  color: white;
+  text-decoration: none;
+  transition: 1s;
+}
+.social a:hover{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
 }

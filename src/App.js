@@ -7,10 +7,13 @@ export default class TodoList extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      list: [...TODOITEMS]
+      list: [...TODOITEMS],
+      isLoggedIn : true
     }
 
     this.changeList = this.changeList.bind(this);
+    this.logIn = this.logIn.bind(this);
+    this.logOut = this.logOut.bind(this);
   }
 
   changeList(itemId) {
@@ -23,20 +26,37 @@ export default class TodoList extends React.Component{
       list: [...this.state.list]
     });
   }
+  
+  logIn(){
+    this.setState(prevState => ({
+      isLoggedIn: prevState
+    }));
+  }
+  logOut(){
+    this.setState(prevState => ({
+      isLoggedIn: !prevState
+    }));
+  }
 
   render(){
     return (
       <div className="main">
-        <div className="todoList">
-            <ul className="list-group">
-              {this.state.list.map(item => <TodoItem
-                key={item.id}
-                id={item.id}
-                text={item.text} 
-                isCompleted={item.completed}
-                changeState={this.changeList}/>)}
-            </ul>
-        </div>
+        {this.state.isLoggedIn ? (
+          <div>
+            <button className="logOutBtn" onClick={this.logOut}>Log out</button>
+              <div className="todoList">
+                <ul className="list-group">
+                  {this.state.list.map(item => <TodoItem
+                    key={item.id}
+                    id={item.id}
+                    text={item.text} 
+                    isCompleted={item.completed}
+                    changeState={this.changeList}/>)
+                  }
+                </ul>
+              </div>
+          </div> 
+        ) : <button className="logInBtn" onClick={this.logIn}>Log in</button>}
       </div>
     )
   }

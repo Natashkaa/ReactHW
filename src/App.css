@@ -2,12 +2,12 @@
   background-color: #def0ef;
   padding: 50px;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  min-height: 420px;
 }
 .todoItemChecked{
   color: lightslategray;
   text-decoration: line-through;
-  
 }
 .item{
   margin-left: 10px
@@ -34,6 +34,7 @@
   font-weight: lighter;
   font-family: 'Courier New', Courier, monospace;
 }
+
 /*footer*/
 .footer{
   background-color: rgb(66, 51, 119);
@@ -63,4 +64,34 @@
   color: white;
   font-size: 20px;
   text-decoration: none;
+}
+
+/*buttons*/
+.logOutBtn{
+  background-color: rgb(111, 89, 190);
+  border: none;
+  width: 100px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
+}
+.logOutBtn:hover{
+  background-color: rgb(89, 72, 150);
+}
+.logInBtn{
+  background-color: rgb(89, 72, 150);
+  border: none;
+  width: 100px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
+}
+.logInBtn:hover{
+  background-color: rgb(111, 89, 190);
 }

@@ -1,4 +1,4 @@
-export const TODOITEMS = [
+export let TODOITEMS = [
     {
         id: 1,
         text: "Take out the trash",

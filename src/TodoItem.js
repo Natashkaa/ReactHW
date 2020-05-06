@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function TodoItem(props){
-    const [done, setDone] = useState(false);
-    
-    return (
-        <div className="todoList">
-            <ul class="list-group">
-                <li class="list-group-item form-check">
-                    <input type="checkbox" checked={done} onChange={() => setDone(!done)} />
-                    {done ? (
-                        <span className="todoItemChecked item">{props.text}</span>
-                    ) : <span className="item">{props.text}</span>}
-                    
-                </li>
-            </ul>
-        </div>
-    )
+class TodoItem extends React.Component{
+    render(){
+        return (
+            <li className="list-group-item form-check">
+                <input type="checkbox" checked={this.props.isCompleted} onChange={() => 
+                    {
+                        return this.props.changeState(this.props.id);
+                    }}/>
+                {this.props.isCompleted ? (
+                    <span className="todoItemChecked item">{this.props.text}</span>
+                ) : <span className="item">{this.props.text}</span>}
+            </li>
+        )
+    }
 }
 
 export default TodoItem;

@@ -12,8 +12,22 @@
 .item{
   margin-left: 10px
 }
+form{
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px
+}
 .input{
-  border: 2px solid green;
+  border: 1px solid rgb(201, 212, 221);
+  background-color: rgb(238, 251, 253);
+  margin: 10px 0
+}
+.info{
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px
 }
 /*header*/
 .header{
@@ -67,20 +81,6 @@
 }
 
 /*buttons*/
-.logOutBtn{
-  background-color: rgb(111, 89, 190);
-  border: none;
-  width: 100px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  color: white;
-  font-size: 20px;
-  font-weight: lighter;
-  font-family: 'Courier New', Courier, monospace;
-}
-.logOutBtn:hover{
-  background-color: rgb(89, 72, 150);
-}
 .logInBtn{
   background-color: rgb(89, 72, 150);
   border: none;

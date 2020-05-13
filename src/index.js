@@ -5,14 +5,17 @@ import App from './App';
 import Header from './Header';
 import Footer from './Footer';
 import * as serviceWorker from './serviceWorker';
+import { Router } from 'react-router-dom';
+import {createBrowserHistory} from 'history';
 
-ReactDOM.render(
-  <React.StrictMode>
+const history = createBrowserHistory()
+
+ReactDOM.render((
+  <Router history={history}>
     <Header/>
-    <App />
     <Footer/>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Router>
+  ), document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

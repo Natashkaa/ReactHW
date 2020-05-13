@@ -1,5 +1,5 @@
 .main{
-  background-color: #def0ef;
+  background-color: #61aca8;
   padding: 50px;
   align-items: center;
   justify-content: center;
@@ -48,10 +48,80 @@ form{
   font-weight: lighter;
   font-family: 'Courier New', Courier, monospace;
 }
+.navLink{
+  font-size: 15px;
+  color: white;
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
+  transition: 0.5s;
+}
+.navLink:hover{
+  font-size: 17px;
+  color: rgb(122, 252, 252);
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
+}
+/*containers*/
+.filmsContainer, .planetsContainer, .starshipsContainer, .speciesContainer, .vechiclesContainer{
+  background-image: url("/starwars_image_bcg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+}
+.filmCard, .starshipsCard, .speciesCard, .vechiclesCard{
+  background-color: rgba(0, 0, 0, 0.397);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(143, 143, 143);
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
+}
+/*people*/
+.peopleContainer{
+  background-image: url("/starwars_image_bcg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.peopleCard{
+  background-color: rgba(0, 0, 0, 0.397);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(143, 143, 143);
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
+}
+/*planets*/
+.planetsContainer{
+  background-image: url("/starwars_image_bcg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24px;
+}
+.planetsCard{
+  background-color: rgba(0, 0, 0, 0.397);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(143, 143, 143);
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
+}
+hr{
+  background-color: rgb(255, 255, 255);
+  width: 70%
+}
 
 /*footer*/
 .footer{
-  background-color: rgb(66, 51, 119);
   height: 100px;
   color: white;
   display: flex;
@@ -78,20 +148,4 @@ form{
   color: white;
   font-size: 20px;
   text-decoration: none;
-}
-
-/*buttons*/
-.logInBtn{
-  background-color: rgb(89, 72, 150);
-  border: none;
-  width: 100px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  color: white;
-  font-size: 20px;
-  font-weight: lighter;
-  font-family: 'Courier New', Courier, monospace;
-}
-.logInBtn:hover{
-  background-color: rgb(111, 89, 190);
 }

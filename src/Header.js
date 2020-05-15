@@ -1,16 +1,12 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
-import Films from './Films'
-import People from './People'
-import Planets from './Planets'
-import Starships from './Starships'
-import Species from './Species'
-import Vechicles from './Vechicles'
+import { Reducer } from '../Marvel/Reducer';
+import { createStore } from '../Marvel/createStore';
+import { getMarvelHeroes } from '../Marvel/Actions';
+
 
 function Header(){
     return (
-        <Router>
         <div className="pos-f-t">
             <nav className="navbar navbar-dark bg-dark">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,38 +16,30 @@ function Header(){
             </nav>
             <div className="collapse" id="navbarToggleExternalContent">
                 <div className="bg-dark p-4">
-                   <p><NavLink to='/films' className="navLink">Films</NavLink></p>
-                   <p><NavLink to='/people' className="navLink">People</NavLink></p>
-                   <p><NavLink to='/planets' className="navLink">Planets</NavLink></p>
-                   <p><NavLink to='/starships' className="navLink">Starships</NavLink></p>
-                   <p><NavLink to='/species' className="navLink">Species</NavLink></p>
-                   <p><NavLink to='/vechicles' className="navLink">Vechicles</NavLink></p>
+                   <p><button id="marvelButton">Marvel</button></p>
                 </div>
             </div>
-        </div>
+            <div id="heroesContainer">
 
-        <Switch>
-            <Route path='/films'>
-                <Films/>
-            </Route>
-            <Route path='/people'>
-                <People/>
-            </Route>
-            <Route path='/planets'>
-                <Planets/>
-            </Route>
-            <Route path='/starships'>
-                <Starships/>
-            </Route>
-            <Route path='/species'>
-                <Species/>
-            </Route>
-            <Route path='/vechicles'>
-                <Vechicles/>
-            </Route>
-        </Switch>
-      </Router>
+            </div>
+        </div>
     )
+}
+
+function render(){
+    let res = store.getState();
+    <div className="peopleContainer justify-content-center">
+          {res.map(heroe => (
+            <div className="card marvelCard">
+                <img src={heroe.thumbnail.path + "." + heroe.thumbnail.extension} className="card-img-top" alt="..."></img>
+                <div class="card-body">
+                    <h5 class="card-title">{heroe.name}</h5>
+                    <p class="card-text">{heroe.description}</p>
+                </div>
+            </div>
+            )
+          )}
+        </div>
 }
 
 export default Header;

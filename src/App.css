@@ -18,10 +18,12 @@ form{
   font-family: 'Courier New', Courier, monospace;
   padding: 10px
 }
-.input{
-  border: 1px solid rgb(201, 212, 221);
-  background-color: rgb(238, 251, 253);
-  margin: 10px 0
+button{
+  border: 0px solid rgb(201, 212, 221);
+  background-color: rgb(88, 201, 216);
+  border-radius: 5px;
+  margin: 10px 0;
+  color: white
 }
 .info{
   font-size: 20px;
@@ -113,6 +115,16 @@ form{
   border: 1px solid rgb(143, 143, 143);
   margin: 20px;
   padding: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
+}
+/*marvel*/
+.marvelCard{
+  width: 20%;
+  background-color: rgba(0, 0, 0, 0.397);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(143, 143, 143);
+  border-radius: 10px;
+  margin: 20px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
 }
 hr{

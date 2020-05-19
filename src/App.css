@@ -5,37 +5,58 @@
   justify-content: center;
   min-height: 420px;
 }
+.todoList{
+  margin-top: 10px;
+}
 .todoItemChecked{
   color: lightslategray;
   text-decoration: line-through;
 }
 .item{
-  margin-left: 10px
-}
-form{
-  font-size: 20px;
+  margin-left: 10px;
   font-weight: lighter;
   font-family: 'Courier New', Courier, monospace;
-  padding: 10px
 }
-button{
+.list-group-item{
+  display: inline;
+}
+/* button{
   border: 0px solid rgb(201, 212, 221);
   background-color: rgb(88, 201, 216);
   border-radius: 5px;
   margin: 10px 0;
   color: white
-}
+} */
 .info{
   font-size: 20px;
   font-weight: lighter;
   font-family: 'Courier New', Courier, monospace;
   padding: 10px
 }
+.addTime{
+  color: rgb(223, 213, 213);
+  font-size: 12px;
+}
+table td{
+  width: 50%
+}
+.deleteItem{
+  color: rgb(223, 213, 213);
+  border: none;
+  background-color: transparent;
+  transition: 1s;
+  outline: none;
+}
+.deleteItem:hover, .deleteItem:focus{
+  color: rgb(153, 140, 140);
+  outline: none;
+  box-shadow: none;
+}
 /*header*/
 .header{
-  background-color: rgb(66, 51, 119);
   height: 100px;
   color: white;
+  padding-left: 10px;
 }
 .today{
   font-size: 20px;
@@ -63,74 +84,6 @@ button{
   font-weight: lighter;
   font-family: 'Courier New', Courier, monospace;
 }
-/*containers*/
-.filmsContainer, .planetsContainer, .starshipsContainer, .speciesContainer, .vechiclesContainer{
-  background-image: url("/starwars_image_bcg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 20px;
-}
-.filmCard, .starshipsCard, .speciesCard, .vechiclesCard{
-  background-color: rgba(0, 0, 0, 0.397);
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(143, 143, 143);
-  margin: 20px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
-}
-/*people*/
-.peopleContainer{
-  background-image: url("/starwars_image_bcg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.peopleCard{
-  background-color: rgba(0, 0, 0, 0.397);
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(143, 143, 143);
-  margin: 20px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
-}
-/*planets*/
-.planetsContainer{
-  background-image: url("/starwars_image_bcg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 24px;
-}
-.planetsCard{
-  background-color: rgba(0, 0, 0, 0.397);
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(143, 143, 143);
-  margin: 20px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
-}
-/*marvel*/
-.marvelCard{
-  width: 20%;
-  background-color: rgba(0, 0, 0, 0.397);
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(143, 143, 143);
-  border-radius: 10px;
-  margin: 20px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
-}
-hr{
-  background-color: rgb(255, 255, 255);
-  width: 70%
-}
 
 /*footer*/
 .footer{
@@ -149,7 +102,6 @@ hr{
   height: 40px;
   font-weight: lighter;
   font-family: 'Courier New', Courier, monospace;
-  
 }
 .social a{
   color: white;

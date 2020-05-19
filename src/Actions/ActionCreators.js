@@ -1,9 +1,17 @@
-import { ADD_NEW_WORD, CHANGE_INPUT } from "./ActionsType"
+import { ADD_NEW_ITEM, 
+         CHANGE_INPUT,
+         SET_CHECK,
+         DELETE_ITEM } from "./ActionsType"
 
-export function addNewWord (word){
+export function addNewItem (){
     return {
-        type: ADD_NEW_WORD,
-        word
+        type: ADD_NEW_ITEM
+    }
+}
+export function deleteItem(id){
+    return {
+        type: DELETE_ITEM,
+        id
     }
 }
 export function changeInput(value, name){
@@ -12,4 +20,11 @@ export function changeInput(value, name){
         fieldName: name,
         value: value
     };
+}
+
+export function setCheck(id){
+    return {
+        type: SET_CHECK,
+        id
+    }
 }

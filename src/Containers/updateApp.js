@@ -1,18 +1,23 @@
 import { connect } from 'react-redux'
-import { addNewWord, changeInput } from '../Actions/ActionCreators'
+import { addNewItem, 
+         changeInput,
+         setCheck,
+         deleteItem } from '../Actions/ActionCreators'
 import MainApp from '../Components/MainApp'
 
 function mapStateToProps(state){
     return {
-        words: state.words,
-        newWord: state.newWord
+        todoItems: state.todoItems,
+        newTodoItem: state.newTodoItem
     }
 }
 
 function mapDispatchToProps(dispatch){
     return{
-        addNewWord: () => dispatch(addNewWord()),
-        changeInput: (value, name) => dispatch(changeInput(value, name))
+        addNewItem: () => dispatch(addNewItem()),
+        changeInput: (value, name) => dispatch(changeInput(value, name)),
+        setCheck: (id) => dispatch(setCheck(id)),
+        deleteItem: (id) => dispatch(deleteItem(id))
     }
 }
 
